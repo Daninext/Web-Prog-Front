@@ -69,24 +69,23 @@ h2, h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: auto;
+    align-items: center;
 }
 
 .text-logo-is-vert {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .text-logo-is-hor > span {
     display: inline-block;
-    margin: auto 0;
     padding: 5px 2px;
 }
 
 .text-logo-is-vert > span {
     display: inline-block;
-    margin: 0 auto;
     padding: 10px 2px;
 }
 
