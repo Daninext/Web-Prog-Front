@@ -19,18 +19,24 @@ a:hover {
     color: hsla(200, 60%, 40%, 1)
 }
 
-.logo h2 > a {
-    font-size: 40px;
-    text-decoration: none;
+.text-logo {
     color: #4081DB;
+    line-height: .8;
+    padding: 0 15px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    word-spacing: 1em;
+    font-family: "Comic Sans MS", serif;
+    font-size: 40px;
+}
+
+.logo h2 > a {
+    text-decoration: none;
 }
 
 .hd {
-    font-size: 40px;
     margin: 0;
     padding: 0;
-    line-height: .8;
-    font-family: "Comic Sans MS", serif;
 }
 
 .nav-items > a {

@@ -61,10 +61,6 @@ h2, h3 {
 .logo {
 }
 
-.text-logo {
-    padding: 0 15px 5px 15px;
-}
-
 .text-logo-is-hor {
     display: flex;
     flex-direction: row;
