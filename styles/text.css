@@ -1,0 +1,49 @@
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a {
+    font-size: 20px;
+    font-family: "Comic Sans MS", serif;
+}
+
+a:link {
+    color: hsla(200, 60%, 30%, 1)
+}
+
+a:visited {
+    color: hsla(200, 30%, 30%, 1)
+}
+a:hover {
+    color: hsla(200, 60%, 40%, 1)
+}
+
+.logo h2 > a {
+    font-size: 40px;
+    text-decoration: none;
+    color: #4081DB;
+}
+
+.hd {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: .8;
+    font-family: "Comic Sans MS", serif;
+}
+
+.nav-items > a {
+    text-decoration: none;
+    color: #4864F9;
+}
+
+.footer-info {
+    font-family: "Comic Sans MS", serif;
+    font-size: 12px;
+}
+
+.footer-info-item > h5 {
+    font-size: 13px;
+    font-weight: bold;
+}
