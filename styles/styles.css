@@ -7,32 +7,14 @@ body {
 
 h2 {
     display: block;
-    font-size: 24px;
     margin-block-start: 13px;
     margin-block-end: 13px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
 }
 
 h2, h3 {
     margin: 0;
-}
-
-a {
-    font-size: 20px;
-    font-family: "Comic Sans MS", serif;
-}
-
-a:link {
-    color: hsla(200, 60%, 30%, 1)
-}
-
-a:visited {
-    color: hsla(200, 30%, 30%, 1)
-}
-a:hover {
-    color: hsla(200, 60%, 40%, 1)
 }
 
 /* Layout */
@@ -79,12 +61,6 @@ a:hover {
 .logo {
 }
 
-.logo h2 > a {
-    font-size: 40px;
-    text-decoration: none;
-    color: #4081DB;
-}
-
 .text-logo {
     padding: 0 15px 5px 15px;
 }
@@ -114,14 +90,6 @@ a:hover {
     padding: 10px 2px;
 }
 
-.hd {
-    font-size: 40px;
-    margin: 0;
-    padding: 0;
-    line-height: .8;
-    font-family: "Comic Sans MS", serif;
-}
-
 /* Nav module */
 .nav-items {
     display: flex;
@@ -129,9 +97,7 @@ a:hover {
 }
 
 .nav-items > a {
-    text-decoration: none;
     padding: 8px;
-    color: #4864F9;
 }
 
 /* Content module */
@@ -151,8 +117,6 @@ a:hover {
 
 /* Content module */
 .footer-info {
-    font-family: "Comic Sans MS", serif;
-    font-size: 12px;
     display: flex;
     justify-content: space-around;
 }
@@ -162,8 +126,6 @@ a:hover {
 
 .footer-info-item > h5 {
     display: inline-block;
-    font-size: 13px;
-    font-weight: bold;
     margin: 15px 0 2px 0;
 }
 
