@@ -32,4 +32,5 @@ body {
 
 .footer__names {
     padding-left: 50px;
+    text-decoration: underline black;
 }
