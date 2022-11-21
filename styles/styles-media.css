@@ -1,0 +1,17 @@
+@media screen and (max-width: 1700px) {
+    .l-sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery-item {
+        margin: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gallery-item {
+        margin: 8px 20px;
+    }
+}
