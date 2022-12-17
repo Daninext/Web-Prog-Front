@@ -1,4 +1,9 @@
 /* Base */
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("../fonts/Comic Sans MS.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -58,9 +63,6 @@ h2, h3 {
 }
 
 /* Header module */
-.logo {
-}
-
 .text-logo-is-hor {
     display: flex;
     flex-direction: row;
@@ -107,16 +109,13 @@ h2, h3 {
 .gallery-rows-is-shadowed {
     width: 300px;
     height: 200px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 12px 11px rgba(0,0,0,0.25);
 }
 
 /* Content module */
 .footer-info {
     display: flex;
     justify-content: space-around;
-}
-
-.footer-info-item {
 }
 
 .footer-info-item > h5 {
