@@ -4,14 +4,20 @@
     }
 }
 
+@media screen and (min-width: 1600px) {
+    .l-gallery {
+        width: 1200px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
-    .gallery-item {
-        margin: 10px 30px;
+    .l-gallery {
+        width: 900px;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .gallery-item {
-        margin: 8px 20px;
+    .l-gallery {
+        width: 600px;
     }
 }

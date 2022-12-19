@@ -1,77 +1,87 @@
 @media screen and (min-width: 1600px) {
     h2 {
-        font-size: 24px;
+        font-size: 100%;
     }
 
-    a {
-        font-size: 20px;
+    .text-logo {
+        font-size: 260%;
     }
 
-    .logo h2 > a {
-        font-size: 40px;
-    }
-
-    .hd {
-        font-size: 40px;
+    .nav-items > a {
+        font-size: 130%;
     }
 
     .footer-info {
-        font-size: 12px;
+        font-size: 80%;
     }
 
     .footer-info-item > h5 {
-        font-size: 13px;
+        font-size: 110%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    h2 {
+        font-size: 95%;
+    }
+
+    .text-logo {
+        font-size: 260%;
+    }
+
+    .nav-items > a {
+        font-size: 125%;
+    }
+
+    .footer-info {
+        font-size: 78%;
+    }
+
+    .footer-info-item > h5 {
+        font-size: 110%;
     }
 }
 
 @media screen and (max-width: 1200px) {
     h2 {
-        font-size: 20px;
+        font-size: 90%;
     }
 
-    a {
-        font-size: 16px;
+    .text-logo {
+        font-size: 260%;
     }
 
-    .logo h2 > a {
-        font-size: 32px;
-    }
-
-    .hd {
-        font-size: 32px;
+    .nav-items > a {
+        font-size: 120%;
     }
 
     .footer-info {
-        font-size: 10px;
+        font-size: 75%;
     }
 
     .footer-info-item > h5 {
-        font-size: 11px;
+        font-size: 110%;
     }
 }
 
 @media screen and (max-width: 1000px) {
     h2 {
-        font-size: 16px;
+        font-size: 80%;
     }
 
-    a {
-        font-size: 12px;
+    .text-logo {
+        font-size: 260%;
     }
 
-    .logo h2 > a {
-        font-size: 26px;
-    }
-
-    .hd {
-        font-size: 26px;
+    .nav-items > a {
+        font-size: 110%;
     }
 
     .footer-info {
-        font-size: 8px;
+        font-size: 70%;
     }
 
     .footer-info-item > h5 {
-        font-size: 9px;
+        font-size: 110%;
     }
 }
