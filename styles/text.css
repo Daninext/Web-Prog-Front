@@ -1,5 +1,4 @@
 h2 {
-    font-size: 100%;
     font-weight: bold;
 }
 
@@ -26,30 +25,29 @@ a:hover {
     text-decoration: none;
     word-spacing: 1em;
     font-family: "Comic Sans MS", serif;
-    font-size: 260%;
 }
 
 .logo h2 > a {
     text-decoration: none;
+    color: #4081DB;
 }
 
 .hd {
     margin: 0;
     padding: 2px;
+    line-height: .8;
+    font-family: "Comic Sans MS", serif;
 }
 
 .nav-items > a {
-    font-size: 130%;
     text-decoration: none;
     color: #4864F9;
 }
 
 .footer-info {
     font-family: "Comic Sans MS", serif;
-    font-size: 80%;
 }
 
 .footer-info-item > h5 {
-    font-size: 110%;
     font-weight: bold;
 }

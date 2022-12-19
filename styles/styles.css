@@ -1,10 +1,16 @@
 /* Base */
+html {
+    height: 100%;
+
 @font-face {
     font-family: "Comic Sans MS";
     src: url("../fonts/Comic Sans MS.ttf");
 }
 
 body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     line-height: 1.5;
@@ -22,6 +28,41 @@ h2, h3 {
     margin: 0;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    display: grid;
+    border: 1px solid black;
+    border-collapse: collapse;
+    grid-template-columns: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+    place-content: center;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) td {
+    background: #48F9D1;
+}
+
+tr:nth-child(even) td {
+    background: #40D3DB;
+}
+
 /* Layout */
 .l-header {
     background-color: rgba(64, 211, 219, 0.3);
@@ -32,17 +73,20 @@ h2, h3 {
 }
 
 .l-gallery {
-    display: inline-block;
+    display: flex;
     margin-right: auto;
     margin-left: auto;
-    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1200px;
 }
 
 .l-sidebar {
+    position: fixed;
+    right: 0;
+    top: 30%;
     display: inline-block;
     width: 300px;
-    margin-right: 0;
-    margin-left: auto;
 }
 
 .l-nav {
@@ -50,19 +94,21 @@ h2, h3 {
 }
 
 .l-content {
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
 }
 
 .l-main {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px 0;
     background-color: rgba(64, 211, 219, 0.3);
 }
 
-.l-header, .l-content, .l-footer {
-    padding: 0 30px;
+/* Header module */
+.text-logo {
+    padding: 0 15px 5px 15px;
 }
 
-/* Header module */
 .text-logo-is-hor {
     display: flex;
     flex-direction: row;
@@ -98,13 +144,10 @@ h2, h3 {
 }
 
 /* Content module */
-.gallery-rows {
-    width: 1200px;
-    display: flex;
-    justify-content: space-around;
-    margin-right: auto;
-    margin-left: 0;
+.gallery-item {
+    margin: 15px 45px;
 }
+
 
 .gallery-rows-is-shadowed {
     width: 300px;
@@ -112,7 +155,6 @@ h2, h3 {
     box-shadow: 0 12px 11px rgba(0,0,0,0.25);
 }
 
-/* Content module */
 .footer-info {
     display: flex;
     justify-content: space-around;
