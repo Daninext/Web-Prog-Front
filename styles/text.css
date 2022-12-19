@@ -1,10 +1,9 @@
 h2 {
-    font-size: 24px;
+    font-size: 100%;
     font-weight: bold;
 }
 
 a {
-    font-size: 20px;
     font-family: "Comic Sans MS", serif;
 }
 
@@ -27,7 +26,7 @@ a:hover {
     text-decoration: none;
     word-spacing: 1em;
     font-family: "Comic Sans MS", serif;
-    font-size: 40px;
+    font-size: 260%;
 }
 
 .logo h2 > a {
@@ -36,20 +35,21 @@ a:hover {
 
 .hd {
     margin: 0;
-    padding: 0;
+    padding: 2px;
 }
 
 .nav-items > a {
+    font-size: 130%;
     text-decoration: none;
     color: #4864F9;
 }
 
 .footer-info {
     font-family: "Comic Sans MS", serif;
-    font-size: 12px;
+    font-size: 80%;
 }
 
 .footer-info-item > h5 {
-    font-size: 13px;
+    font-size: 110%;
     font-weight: bold;
 }
