@@ -2,16 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="кот, коты, котики, фото, картинки, фото с котиками">
+    <meta name="description" content="Здесь вы можете увидеть много милых котов, а также разместить фото своих">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles/styles.css" rel="stylesheet">
     <link href="./styles/text.css" rel="stylesheet">
     <link href="./styles/styles-media.css" rel="stylesheet">
     <link href="./styles/text-media.css" rel="stylesheet">
+    <script src="scripts/generateNewGallery.js"></script>
     <script src="scripts/calcLoadTime.js"></script>
     <script src="scripts/visualEff.js"></script>
-    <title>Статистика</title>
+    <title>Мой котейка</title>
 </head>
-<body>
+<body onload="createGallery(1)">
     <header class="l-header">
         <div class="logo">
             <h2 class="hd">
@@ -36,16 +39,16 @@
             <a class="nav-item" href="statistic.html">Статистика</a>
         </div>
     </nav>
+    <main class="l-main">
+        <div class="l-content">
+            <div class="l-gallery">
 
-    <div style="flex-grow: 1">
-        <table>
-            <tr><th>Name</th><th>Amount</th ><th>New</th></tr>
-            <tr><td>Users</td><td>1</td><td>1</td></tr>
-            <tr><td>Cats</td><td>9</td><td>5</td></tr>
-            <tr><td>Comments</td><td>0</td><td>0</td></tr>
-        </table>
-    </div>
-
+            </div>
+            <div class="l-sidebar">
+                <p><img src="cats/10.jpg"></p>
+            </div>
+        </div>
+    </main>
     <nav class="l-nav">
         <div class="nav-items">
             <a class="nav-item" href="index.html">Главная</a>
