@@ -12,6 +12,11 @@ body {
     line-height: 1.5;
 }
 
+form {
+    margin: 5px 20px;
+    width: 200px;
+}
+
 h2 {
     display: block;
     margin-block-start: 13px;
@@ -100,6 +105,13 @@ tr:nth-child(even) td {
     background-color: rgba(64, 211, 219, 0.3);
 }
 
+.l-cat-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
 /* Header module */
 .logo {
 }
@@ -157,7 +169,6 @@ tr:nth-child(even) td {
     justify-content: space-around;
 }
 
-
 .footer-info-item {
 }
 
@@ -170,4 +181,17 @@ tr:nth-child(even) td {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+#breed-input, #name-input {
+    margin: 10px 0;
+    padding:10px;
+    border-radius:10px;
+    border:0;
+    border-bottom:1px solid rgba(64, 211, 219, 0.8);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+}
+
+form button {
+    padding: 10px 2px;
 }
