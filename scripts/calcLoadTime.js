@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', event => checkTime());
-window.addEventListener('load', event => showTime())
+window.addEventListener('load', event => showTime());
+const entries = performance.getEntriesByType("navigation");
 
 let startTime = 0;
 function checkTime() {
@@ -10,8 +11,11 @@ function showTime() {
     let place = document.getElementsByClassName("l-footer");
     let elem = document.createElement('p');
 
-    let time = (Date.now() - startTime) / 1000;
-    console.log(time.toString() + ' seconds');
+    let domTime = 0;
+    entries.forEach((entry) => {
+        domTime = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+    });
+    let time = ((Date.now() - startTime + domTime) / 1000).toFixed(3);
     elem.textContent = "Loading time: " + time.toString() + ' seconds';
 
     place.item(0).appendChild(elem);
