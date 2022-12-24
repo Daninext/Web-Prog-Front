@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="кот, коты, котики, фото, картинки, фото с котиками">
@@ -42,16 +42,26 @@
   </nav>
 
   <div class="l-cat-form">
-    <form id="cat-form">
-      <label for="name-input">Имя кота</label>
-      <input type="text" id="name-input" name="catName" placeholder="Имя">
+    <div class="cat-forms" style="display: flex; flex-direction: column">
+      <form id="cat-form">
+        <label for="name-input">Имя кота</label>
+        <input type="text" id="name-input" name="catName" placeholder="Имя" required pattern="[а-яА-Яa-zA-Z]*" minlength="3" maxlength="12">
 
-      <label for="breed-input">Порода кота</label>
-      <input type="text" id="breed-input" name="catBreed" placeholder="Порода">
+        <label for="breed-input">Порода кота</label>
+        <input type="text" id="breed-input" name="catBreed" placeholder="Порода" required pattern="[а-яА-Яa-zA-Z]*" minlength="3" maxlength="20">
 
-      <button type="submit">Добавить</button>
-      <button type="reset">Очистить список</button>
-    </form>
+        <button type="submit">Добавить</button>
+        <button type="reset">Очистить форму</button>
+        <button type="button" onclick="clearCats()">Очистить список</button>
+      </form>
+      <br>
+      <form id="id-cat-form">
+        <label for="id-input">ID кота</label>
+        <input type="number" id="id-input" name="catID" placeholder="ID" required pattern="[0-9]*">
+
+        <button type="button" onclick="removeCat()">Удалить кота</button>
+      </form>
+    </div>
   </div>
 
   <nav class="l-nav">

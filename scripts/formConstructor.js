@@ -3,29 +3,56 @@ window.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         addCat();
     })
-});
-
-window.addEventListener("DOMContentLoaded", function() {
     document.getElementById('cat-form').addEventListener("reset", function(e) {
         e.preventDefault();
-        clearCats();
+        clearForm();
     })
 });
 
 window.addEventListener('load', event => createTable())
 
 function addCat() {
-    let _name = document.getElementById("name-input").value;
-    let _breed = document.getElementById("breed-input").value;
-    let id = localStorage.length + 1;
+    let cats = localStorage.getItem("cats");
+    if (cats == null) {
+        cats = [{id: 0, _name: document.getElementById("name-input").value, _breed:document.getElementById("breed-input").value}];
+        localStorage.setItem("cats", JSON.stringify(cats));
+    } else {
+        cats = JSON.parse(cats);
+        cats.push({id: cats[cats.length - 1].id + 1, _name: document.getElementById("name-input").value, _breed:document.getElementById("breed-input").value});
+        localStorage.setItem("cats", JSON.stringify(cats));
+    }
 
-    localStorage.setItem(id.toString(), JSON.stringify({catName: _name, catBreed: _breed}));
     createTable();
 }
 
 function clearCats() {
-    localStorage.clear();
+    localStorage.removeItem("cats");
     createTable();
+}
+
+function clearForm() {
+    document.getElementById("name-input").value = null;
+    document.getElementById("breed-input").value = null;
+}
+
+function removeCat() {
+    let cats = localStorage.getItem("cats");
+    if (cats != null) {
+        cats = JSON.parse(cats);
+        let ind = -1;
+        let _id = document.getElementById("id-input").value;
+        for (let i = 0; i < cats.length; ++i)
+            if (cats[i].id == _id) {
+                ind = i;
+                break;
+            }
+
+        if (ind != -1) {
+            cats.splice(ind, 1);
+            localStorage.setItem("cats", JSON.stringify(cats));
+            createTable();
+        }
+    }
 }
 
 function createTable() {
@@ -39,6 +66,7 @@ function createTable() {
         place.removeChild(place.children.item(1))
 
     table = document.createElement("table");
+    let head = document.createElement("thead");
 
     row = document.createElement("tr");
 
@@ -54,29 +82,31 @@ function createTable() {
     thing.textContent = "Порода";
     row.appendChild(thing)
 
-    table.appendChild(row);
+    head.appendChild(row);
+    table.appendChild(head);
 
-    let keys = Object.keys(localStorage);
-    for(let key of keys) {
-        let cat = JSON.parse(localStorage.getItem(key));
-        console.log(cat);
+    let body = document.createElement("tbody");
 
-        row = document.createElement("tr");
+    let cats = JSON.parse(localStorage.getItem("cats"));
+    if (cats != null)
+        for(let cat of cats) {
+            row = document.createElement("tr");
 
-        thing = document.createElement("td");
-        thing.textContent = key;
-        row.appendChild(thing)
+            thing = document.createElement("td");
+            thing.textContent = cat.id;
+            row.appendChild(thing)
 
-        thing = document.createElement("td");
-        thing.textContent = cat.catName;
-        row.appendChild(thing)
+            thing = document.createElement("td");
+            thing.textContent = cat._name;
+            row.appendChild(thing)
 
-        thing = document.createElement("td");
-        thing.textContent = cat.catBreed;
-        row.appendChild(thing)
+            thing = document.createElement("td");
+            thing.textContent = cat._breed;
+            row.appendChild(thing)
 
-        table.appendChild(row);
-    }
+            body.appendChild(row);
+        }
 
+    table.appendChild(body);
     place.appendChild(table);
 }
