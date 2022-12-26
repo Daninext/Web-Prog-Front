@@ -2,8 +2,21 @@ window.addEventListener('load', event => getComment());
 
 function getComment() {
     let id = Math.floor(Math.random( ) * 500);
-    fetch('https://jsonplaceholder.typicode.com/comments/' + id.toString())
+    fetch('https://jsonplaceholder.typicode.com/comments/' + id.toString()).catch(() => errorGif())
         .then(response => processing(response))
+}
+
+function errorGif() {
+    let gif = document.getElementById("load-gif");
+    gif.setAttribute("src", "gifs/wrong.gif");
+    gif.setAttribute("style", "height: 240px; width: 245px")
+
+    let content = document.getElementsByClassName("l-content")[0];
+    let head = document.createElement("p");
+    head.innerText = "Что-то пошло не так...";
+    head.setAttribute("style", "visibility: visible");
+    head.setAttribute("class", "fail-comment");
+    content.appendChild(head);
 }
 
 function processing(request) {
@@ -29,15 +42,6 @@ function processing(request) {
             comment.appendChild(body);
         })
     } else {
-        let gif = document.getElementById("load-gif");
-        gif.setAttribute("src", "gifs/wrong.gif");
-        gif.setAttribute("style", "height: 240px; width: 245px")
-
-        let content = document.getElementsByClassName("l-content")[0];
-        let head = document.createElement("p");
-        head.innerText = "Что-то пошло не так...";
-        head.setAttribute("style", "visibility: visible");
-        head.setAttribute("class", "fail-comment");
-        content.appendChild(head);
+        errorGif()
     }
 }
