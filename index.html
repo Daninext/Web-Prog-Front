@@ -9,9 +9,12 @@
     <link href="./styles/text.css" rel="stylesheet">
     <link href="./styles/styles-media.css" rel="stylesheet">
     <link href="./styles/text-media.css" rel="stylesheet">
+    <script src="scripts/generateNewGallery.js"></script>
+    <script src="scripts/calcLoadTime.js"></script>
+    <script src="scripts/visualEff.js"></script>
     <title>Мой котейка</title>
 </head>
-<body>
+<body onload="createGallery(9)">
     <header class="l-header">
         <div class="logo">
             <h2 class="hd">
@@ -31,23 +34,16 @@
     </header>
     <nav class="l-nav">
         <div class="nav-items">
-            <a href="index.html">Главная</a>
-            <a href="">Случайный котик</a>
-            <a href="statistic.html">Статистика</a>
+            <a class="nav-item" href="index.html">Главная</a>
+            <a class="nav-item" href="randomCat.html">Случайный котик</a>
+            <a class="nav-item" href="statistic.html">Статистика</a>
+            <a class="nav-item" href="catList.html">Список</a>
         </div>
     </nav>
     <main class="l-main">
         <div class="l-content">
             <div class="l-gallery">
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/1.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/2.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/3.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/4.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/5.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/6.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/7.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/8.jpg"></p>
-                <p class="gallery-item gallery-item-is-shadowed"><img src="cats/9.jpg"></p>
+
             </div>
             <div class="l-sidebar">
                 <p><img src="cats/10.jpg"></p>
@@ -57,9 +53,10 @@
     </main>
     <nav class="l-nav">
         <div class="nav-items">
-            <a href="index.html">Главная</a>
-            <a href="">Случайный котик</a>
-            <a href="statistic.html">Статистика</a>
+            <a class="nav-item" href="index.html">Главная</a>
+            <a class="nav-item" href="randomCat.html">Случайный котик</a>
+            <a class="nav-item" href="statistic.html">Статистика</a>
+            <a class="nav-item" href="catList.html">Список</a>
         </div>
     </nav>
     <footer class="l-footer">

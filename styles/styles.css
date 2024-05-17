@@ -16,6 +16,11 @@ body {
     line-height: 1.5;
 }
 
+form {
+    margin: 5px 20px;
+    width: 200px;
+}
+
 h2 {
     display: block;
     margin-block-start: 13px;
@@ -93,6 +98,17 @@ tr:nth-child(even) td {
     background-color: rgba(82, 192, 242, 0.7);
 }
 
+.l-preloader {
+    display: flex;
+    justify-content: center;
+}
+
+.l-comment > p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
 .l-content {
     padding: 10px;
 }
@@ -102,6 +118,13 @@ tr:nth-child(even) td {
     position: relative;
     padding: 20px 0;
     background-color: rgba(64, 211, 219, 0.3);
+}
+
+.l-cat-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
 }
 
 /* Header module */
@@ -160,6 +183,9 @@ tr:nth-child(even) td {
     justify-content: space-around;
 }
 
+.footer-info-item {
+}
+
 .footer-info-item > h5 {
     display: inline-block;
     margin: 15px 0 2px 0;
@@ -169,4 +195,25 @@ tr:nth-child(even) td {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+#breed-input, #name-input {
+    margin: 10px 0;
+    padding:10px;
+    border-radius:10px;
+    border:0;
+    border-bottom:1px solid rgba(64, 211, 219, 0.8);
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+}
+
+form button {
+    padding: 10px 2px;
+}
+
+.fail-comment {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+
+    visibility: hidden;
 }
