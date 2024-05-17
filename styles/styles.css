@@ -1,6 +1,10 @@
 /* Base */
 html {
     height: 100%;
+
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("../fonts/Comic Sans MS.ttf");
 }
 
 body {
@@ -124,9 +128,6 @@ tr:nth-child(even) td {
 }
 
 /* Header module */
-.logo {
-}
-
 .text-logo {
     padding: 0 15px 5px 15px;
 }
@@ -135,24 +136,23 @@ tr:nth-child(even) td {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: auto;
+    align-items: center;
 }
 
 .text-logo-is-vert {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .text-logo-is-hor > span {
     display: inline-block;
-    margin: auto 0;
     padding: 5px 2px;
 }
 
 .text-logo-is-vert > span {
     display: inline-block;
-    margin: 0 auto;
     padding: 10px 2px;
 }
 
@@ -171,8 +171,11 @@ tr:nth-child(even) td {
     margin: 15px 45px;
 }
 
-.gallery-item-is-shadowed {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+.gallery-rows-is-shadowed {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 12px 11px rgba(0,0,0,0.25);
 }
 
 .footer-info {
